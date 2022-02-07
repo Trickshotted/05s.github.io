@@ -45,7 +45,7 @@ if(day == -1){
         let stuff = ""
         for (let i = 0; i < words.length; i++) {
 
-            stuff = stuff + "<article style=\"line-height:1.6\"><label style=\"font-size:20px;\"><b>Day " + i + "</b></label><br>" + words[i] + "</b></article><br><br>"
+            stuff = stuff + "<article style=\"line-height:1.6\"><label style=\"font-size:20px;\"><b>Day " + (i + 1) + "</b></label><br>" + words[i] + "</b></article><br><br>"
         }
         document.getElementById("html").innerHTML = stuff
 
@@ -54,4 +54,10 @@ if(day == -1){
 
     function redirect(file){
         window.location.href = file
+    }
+
+
+    function getLength(){
+
+        document.getElementById("ptag").innerHTML = "See every answer for all<b> "+ words.length.toString() +" </b>days."
     }
