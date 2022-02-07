@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wordle Helper</title>
+        <script src="main.js"></script>
+        <style>
+            body{
+                font-family: 'Segoe UI';;
+                text-align: center;
+                display:flex; flex-direction:column; justify-content:center;
+  min-height:98vh;
+  overflow-y: auto;
+  background-color: #121213;
+  color: white;
+  font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+            }
+
+            .top{
+                animation: 1s ease-out 0s 1 slideInFromTop;
+            }
+
+            .middle{
+                animation: 1s ease-out 0s 1 slideInFromLeft;
+                
+            }
+
+
+            @keyframes slideInFromTop{
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideInFromLeft{
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes labelSlideInFromLeft{
+    0% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+article {
+ width: 20%;
+ margin: 0 auto;
+ padding: 1.5rem;
+ overflow-wrap: break-word;
+ background-color: #181819;
+ border-radius: 20px;
+ overflow:hidden;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ display: inline-block;
+
+}
+
+
+
+
+button{
+                margin-bottom: 10px;
+                border: none;
+                font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+                background-color: #6aaa64;
+                padding: 10px;
+                padding-top: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                color: white;
+            }
+
+            button:hover{
+                background-color: #538d4e;
+            }
+
+            input{
+                border: none;
+                border-radius: 5px;
+                background-color: #252526;
+                height: 25px;
+                width:60%;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+                font-size: 16px;
+                color: #d7dadc;
+                text-align: center;
+            }
+
+            .anim{
+                animation: 1s ease-out 0s 1 labelSlideInFromLeft
+            }
+
+        </style>
+        <body>
+            <div class="top">
+                <h1 style="font-size: 50px;">Wordle Helper</h1>
+                <p id="content">Made by absq#9999</p>
+            </div>
+            <p style="padding-top:20px"></p>
+            <div class="middle">
+                <article>
+                <h2>Wordle Day</h2>
+                <input id="day" type="text"><br><br>
+                <button onclick="getAnswer()">Get Answer!</button>
+                </article>
+                <p style="padding: 20px; display: inline-block;"></p>
+                <article>
+                    <h2>Wordle Word</h2>
+                    <input id="word" type="text"><br><br>
+                    <button onclick="getDay()">Get Day!</button>
+                    </article>
+                    <p style="padding: 10px;"></p>
+                    <article>
+                        <h2>Full Word List</h2>
+                        <p>See every answer for all days.</p><br>
+                        <button onclick="redirect('list.html')">Go To List</button>
+                        </article>
+                </div>
+            </div>
+        </body>
+    </head>
+</html>
