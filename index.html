@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Wordle Helper</title>
+        <title>Wordle Answers</title>
         <script src="main.js"></script>
         <style>
             body{
@@ -108,9 +108,9 @@ button{
             }
 
         </style>
-        <body>
+        <body onload="getLength()">
             <div class="top">
-                <h1 style="font-size: 50px;">Wordle Helper</h1>
+                <h1 style="font-size: 50px;">Wordle Answers</h1>
                 <p id="content">Made by absq#9999</p>
             </div>
             <p style="padding-top:20px"></p>
@@ -129,7 +129,7 @@ button{
                     <p style="padding: 10px;"></p>
                     <article>
                         <h2>Full Word List</h2>
-                        <p>See every answer for all days.</p><br>
+                        <p id="ptag">See every answer for all days.</p><br>
                         <button onclick="redirect('list.html')">Go To List</button>
                         </article>
                 </div>
